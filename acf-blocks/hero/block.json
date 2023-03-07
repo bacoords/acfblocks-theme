@@ -1,0 +1,24 @@
+{
+    "name": "hero",
+    "title": "Hero",
+    "description": "A hero for my website",
+    "category": "theme",
+    "icon": "admin-comments",
+    "apiVersion": 2,
+    "keywords": [
+        "banner",
+        "cover"
+    ],
+    "style": [],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+    },
+	"supports": {
+		"align": ["full"],
+		"color": {
+            "text": true,
+            "background": true
+        }
+	}
+}

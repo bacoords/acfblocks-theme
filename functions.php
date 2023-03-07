@@ -63,6 +63,23 @@ function theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
 
+/**
+ * Enqueue block editor assets.
+ *
+ * @return void
+ */
+function understrap_enqueue_block_editor_assets() {
+	wp_enqueue_script( 'remove-blocks', get_stylesheet_directory_uri() . '/js/editor.js', array( 'wp-blocks', 'wp-dom', 'wp-edit-post' ), filemtime( get_stylesheet_directory() . '/js/editor.js' ), true );
+}
+add_action( 'enqueue_block_editor_assets', 'understrap_enqueue_block_editor_assets' );
+
+
+
+function acf_blocks_register() {
+	register_block_type( __DIR__ . '/acf-blocks/hero/block.json' );
+}
+add_action( 'init', 'acf_blocks_register' );
+
 
 /**
  * Load the child theme's text domain
