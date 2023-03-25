@@ -1,0 +1,16 @@
+{
+    "apiVersion": 2,
+	"name": "hero",
+	"title": "Hero",
+	"description": "Hero block",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["hero"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "render.php"
+	},
+	"supports": {
+		"align": ["full"]
+	}
+}

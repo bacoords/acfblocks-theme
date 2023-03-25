@@ -102,3 +102,13 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+
+/**
+ * Register our ACF blocks.
+ */
+function acf_blocks_register() {
+	register_block_type( __DIR__ . '/acf-blocks/hero/block.json' );
+}
+add_action( 'init', 'acf_blocks_register' );
